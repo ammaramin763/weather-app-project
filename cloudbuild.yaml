@@ -18,7 +18,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'my-flask-app'
+      - 'my-flask-app-4'
       - '--image=gcr.io/cloudops-479805/my-flask-app:latest'
       - '--region=us-central1'
       - '--platform=managed'
