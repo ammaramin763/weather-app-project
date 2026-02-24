@@ -28,3 +28,5 @@ images:
   - 'gcr.io/$cloudops-479805/my-flask-app'
 
 timeout: '1200s'
+options:
+  logging: CLOUD_LOGGING_ONLY
