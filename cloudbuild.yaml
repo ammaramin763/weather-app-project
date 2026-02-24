@@ -13,16 +13,16 @@ steps:
     args: ['push', 'gcr.io/cloudops-479805/my-flask-app']
 
   # Optional: Deploy to Cloud Run (uncomment if needed)
-  # - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  #   entrypoint: gcloud
-  #   args:
-  #     - 'run'
-  #     - 'deploy'
-  #     - 'my-flask-app'
-  #     - '--image=gcr.io/$PROJECT_ID/my-flask-app:$SHORT_SHA'
-  #     - '--region=us-central1'
-  #     - '--platform=managed'
-  #     - '--allow-unauthenticated'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'my-flask-app'
+      - '--image=gcr.io/$PROJECT_ID/my-flask-app:$SHORT_SHA'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
 
 images:
   - 'gcr.io/cloudops-479805/my-flask-app'
